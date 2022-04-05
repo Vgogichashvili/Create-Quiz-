@@ -1,0 +1,6 @@
+<article class="cards-area d-flex flex-wrap">
+    <app-card class="card" 
+    *ngFor="let item of testList"
+    [cardItem]="item"
+    [hideValidAnswer]="hideValidAnswer"></app-card>
+</article>

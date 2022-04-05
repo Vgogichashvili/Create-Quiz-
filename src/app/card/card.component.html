@@ -1,0 +1,99 @@
+<div class="card">
+    <div class="card-img">
+      <img [src]="cardItem.imageUrl" class="card-img-top" alt="..." />
+    </div>
+    <div class="card-data">
+      <div class="card-body">
+        <p class="card-text">
+          {{ cardItem.description }}
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="input-group mb-3">
+            <div class="input-group-text" (click)="showAnswerStatus(cardItem.answers[0].isValid)">
+              <input
+                class="form-check-input mt-0"
+                *ngIf="!hideValidAnswer"
+                [(ngModel)]="cardItem.answers[0].isValid"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              [(ngModel)]="cardItem.answers[0].text"
+              placeholder="Enter answer"
+              class="form-control"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group mb-3">
+            <div class="input-group-text" (click)="showAnswerStatus(cardItem.answers[1].isValid)">
+              <input
+                class="form-check-input mt-0"
+                *ngIf="!hideValidAnswer"
+                [(ngModel)]="cardItem.answers[1].isValid"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              [(ngModel)]="cardItem.answers[1].text"
+              placeholder="Enter answer"
+              class="form-control"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group mb-3">
+            <div class="input-group-text" (click)="showAnswerStatus(cardItem.answers[2].isValid)">
+              <input
+                class="form-check-input mt-0"
+                *ngIf="!hideValidAnswer"
+                [(ngModel)]="cardItem.answers[2].isValid"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              [(ngModel)]="cardItem.answers[2].text"
+              placeholder="Enter answer"
+              class="form-control"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group mb-3">
+            <div class="input-group-text" (click)="showAnswerStatus(cardItem.answers[3].isValid)">
+              <input
+                class="form-check-input mt-0"
+                *ngIf="!hideValidAnswer"
+                [(ngModel)]="cardItem.answers[3].isValid"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              [(ngModel)]="cardItem.answers[3].text"
+              placeholder="Enter answer"
+              class="form-control"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

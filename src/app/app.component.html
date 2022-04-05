@@ -1,0 +1,19 @@
+<main>
+    <section class="d-flex col-md-11 m-auto align-items-center justify-content-between">
+        <aside class="left col-md-5">
+            <app-form
+            (inpValueChangeEmitter)="inpValueChangeSubscriber($event)"
+            (formSubmitEmitter)="formSubmitSubscriber($event)"
+            ></app-form>
+        </aside>
+        <aside class="right col-md-6">
+            <h1>Current Test </h1>
+            <app-card [cardItem]="loadingTestItem"></app-card>
+        </aside>
+    </section>
+    <br>
+    <section>
+        <h1>All Test Cards</h1>
+        <app-cards-area [testList]="testsList"></app-cards-area>
+    </section>
+</main>
